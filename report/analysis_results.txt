@@ -8,31 +8,19 @@ Card-like Numbers:
 FILE: communication.log
 
 Suspicious Keywords:
+- transaction
 - Delete
-- Transaction
 
 FILE: email_evidence.txt
 
 Email Addresses:
-- suspect@example.test
-- contact@example.test
+- sample1@example.com
+- sample2@example.com
 
 Suspicious Keywords:
 - Transaction
-- suspicious
 - transaction
 
 FILE: gps_data.txt
 
-GPS Coordinates:
-- Latitude: 28.4595
-- Longitude: 77.0266
-- Latitude: 28.6139
-- Longitude: 77.2090
-
 FILE: transactions.csv
-
-Suspicious Keywords:
-- SUSPICIOUS
-- SUSPICIOUS
-- SUSPICIOUS
