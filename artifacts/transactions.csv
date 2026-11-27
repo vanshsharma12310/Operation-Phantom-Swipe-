@@ -1,0 +1,4 @@
+Transaction_ID,Date,Amount,Location,Status
+TX001,2026-11-20,5000,Gurgaon,Flagged
+TX002,2026-11-20,7500,Delhi,Flagged
+TX003,2026-11-21,3000,Noida,Flagged
