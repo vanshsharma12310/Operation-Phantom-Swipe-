@@ -1,5 +1,5 @@
 
-name: Generate Forensic Hashes
+name: Forensic Project Validation
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  generate-hashes:
+  validate:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,20 +23,27 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Analyze Evidence Files
+      - name: Validate Repository Structure
+        run: |
+          for file in README.md report/final_report.md artifacts/card_data.txt artifacts/communication.log artifacts/gps_data.txt artifacts/transactions.csv artifacts/email_evidence.txt scripts/generate_hashes.py scripts/analyze_evidence.py scripts/password_cracking.py chain_of_custody/chain_of_custody.csv; do
+            test -f "$file" || { echo "Missing: $file"; exit 1; }
+          done
+          echo "Repository structure validated!"
+
+      - name: Analyze Evidence
         run: python scripts/analyze_evidence.py
 
-      - name: Simulate Dictionary Attack
+      - name: Password Dictionary Simulation
         run: python scripts/password_cracking.py
 
-      - name: Generate SHA-256 Hashes
+      - name: Generate SHA256 Hashes
         run: python scripts/generate_hashes.py
 
-      - name: Save Results to Repository
+      - name: Save Results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add hashes/SHA256SUMS.txt report/analysis_results.txt report/password_cracking_results.txt
-          git diff --cached --quiet || git commit -m "Update forensic analysis and hashes"
+          git diff --cached --quiet || git commit -m "Update forensic results"
           git push
 
