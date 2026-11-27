@@ -3,7 +3,8 @@ name: Generate Forensic Hashes
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -21,17 +22,18 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          
-        - name: Analyze Evidence Files
+
+      - name: Analyze Evidence Files
         run: python scripts/analyze_evidence.py
 
       - name: Generate SHA-256 Hashes
         run: python scripts/generate_hashes.py
 
-      - name: Save Hashes to Repository
+      - name: Save Results to Repository
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add hashes/SHA256SUMS.txt report/analysis_results.txt
-          git diff --cached --quiet || git commit -m "Add SHA-256 evidence hashes"
+          git diff --cached --quiet || git commit -m "Add forensic analysis and hashes"
           git push
+
