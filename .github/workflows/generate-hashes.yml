@@ -32,6 +32,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add hashes/SHA256SUMS.txt
+          git add hashes/SHA256SUMS.txt report/analysis_results.txt
           git diff --cached --quiet || git commit -m "Add SHA-256 evidence hashes"
           git push
