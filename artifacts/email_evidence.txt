@@ -1,0 +1,5 @@
+SIMULATED EMAIL EVIDENCE
+From: sample1@example.com
+To: sample2@example.com
+Subject: Transaction Records
+Message: Review the simulated transaction records.
