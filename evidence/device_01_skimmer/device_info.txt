@@ -1,0 +1,13 @@
+SIMULATED DEVICE INFORMATION
+Device ID: DEV-001
+Device Type: ATM Card Skimmer
+Case ID: OPS-001
+Status: Synthetic Evidence
+Purpose: Academic digital forensic simulation
+
+Suspected Function:
+Simulated capture of payment card data.
+
+Evidence Source:
+Fictional device description.
+No physical device was seized.
