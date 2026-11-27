@@ -1,0 +1,9 @@
+FROM: suspect@example.test
+TO: contact@example.test
+SUBJECT: Transaction Update
+
+A suspicious transaction test was completed.
+The device records should be preserved for analysis.
+
+DATE: 2026-11-22
+TYPE: Simulated email evidence
