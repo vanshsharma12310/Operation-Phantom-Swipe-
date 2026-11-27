@@ -1,0 +1,14 @@
+SIMULATED DEVICE INFORMATION
+Device ID: DEV-002
+Device Type: Mobile Phone
+Case ID: OPS-001
+Status: Synthetic Evidence
+Purpose: Academic digital forensic simulation
+
+Suspected Contents:
+- Simulated suspicious application records
+- Fictional communication logs
+- Synthetic GPS information
+- Simulated transaction references
+
+No physical mobile device was seized.
