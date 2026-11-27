@@ -1,0 +1,6 @@
+Evidence_ID,Device,Description,Collected_By,Date,Status
+EV001,ATM Skimmer,Simulated card data,Investigator,2026-11-27,Sealed
+EV002,Mobile Phone,Simulated communication logs,Investigator,2026-11-27,Sealed
+EV003,Digital Files,GPS coordinates,Investigator,2026-11-27,Sealed
+EV004,Digital Files,Transaction records,Investigator,2026-11-27,Sealed
+EV005,Digital Files,Email evidence,Investigator,2026-11-27,Sealed
