@@ -26,6 +26,9 @@ jobs:
       - name: Analyze Evidence Files
         run: python scripts/analyze_evidence.py
 
+      - name: Simulate Dictionary Attack
+        run: python scripts/password_cracking.py
+
       - name: Generate SHA-256 Hashes
         run: python scripts/generate_hashes.py
 
@@ -33,7 +36,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add hashes/SHA256SUMS.txt report/analysis_results.txt
-          git diff --cached --quiet || git commit -m "Add forensic analysis and hashes"
+          git add hashes/SHA256SUMS.txt report/analysis_results.txt report/password_cracking_results.txt
+          git diff --cached --quiet || git commit -m "Update forensic analysis and hashes"
           git push
 
